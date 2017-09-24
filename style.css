@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'MonoStroom';
-    src: url('https://noahsc.xyz/MonoStroom-Regular.ttf');
+    font-family: "MonoStroom";
+    src: url("https://noahsc.xyz/MonoStroom-Regular.ttf");
 }
 
 * {
@@ -34,7 +34,7 @@ p {
 }
 
 header {
-	font-family: 'MonoStroom', monospace;
+	font-family: "MonoStroom", monospace;
 	background-color: #003c69;
 	color: white;
 	height: 96px;
@@ -69,7 +69,7 @@ section {
 }
 
 section h1, aside h1 {
-	font-family: 'MonoStroom', monospace;
+	font-family: "MonoStroom", monospace;
 	font-size: 28px;
 }
 
