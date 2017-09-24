@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+}
+
+@keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.blink {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.5, 0, 1, 1) infinite alternate;
+  animation-duration: 750ms;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+li {
+	line-height: 1.6;
+}
+
+p {
+	line-height: 1.4;
+}
+
+header {
+	font-family: "Inconsolata";
+	background-color: #003c69;
+	color: white;
+	height: 96px;
+}
+
+header h1 {
+	margin: 0;
+	padding: 20px;
+	padding-bottom: 4px;
+	font-size: 2em;
+}
+
+header p {
+	margin: 0;
+	padding: 0;
+	margin-left: 52px;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	font-family: "Raleway";
+	min-height: calc(100% - 96px);
+}
+
+section {
+	flex: 0 0 50%;
+	padding: 20px;
+	flex: 1;
+}
+
+section h1, aside h1 {
+	font-family: "Inconsolata";
+	font-size: 28px;
+}
+
+section img {
+	width: 80px;
+	filter: invert(100%);
+	background-size: cover;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+section:nth-child(n+3) {
+	flex: order: 9;
+	background-color: grey
+}
+
+aside {
+	order: -1;
+	height: 100%;
+	flex: 0 0 325px;
+	padding: 20px;
+	border-right: 1px lightgrey solid;
+}
+
+aside ul {
+	font-size: 14px;
+	list-style: none;
+	padding: 0;
+	font-weight: 800;
+}
+
+aside ul ul {
+	margin-bottom: 16px;
+	list-style: circle;
+	padding-left: 40px;
+	font-weight: 400;
+}
+
+@media screen and (max-width: 640px) {
+	main {
+		height: auto;
+	}
+	section, aside {
+		flex: 0 0 100%;
+		padding-bottom: 0px;
+		padding-top: 0px;
+	}
+
+	aside {
+		flex: 0 0 100%;
+		height: auto;
+		border: none;
+		background-color: #4D89B6;
+	}
+
+	aside * { color: white; }
+}
